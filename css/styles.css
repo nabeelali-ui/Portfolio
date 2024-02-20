@@ -118,6 +118,7 @@ nav ul li a {
 
 .subtext {
   display: flex;
+  flex-wrap: wrap;
   font-size: 18px;
 }
 
@@ -138,10 +139,22 @@ nav ul li a {
   background-color: #f0a500;
 }
 
+.subtext .blue {
+  flex: 1;
+  background-color: #00a2ff;
+}
+
 .subtext .green {
   flex: 1;
   background-color: #1eb2a6;
 }
+
+.subtext .purple {
+  flex: 1;
+  background-color: #9b59b6;
+}
+
+/* Quote */
 
 .quote {
   display: block;
@@ -355,8 +368,26 @@ i {
   padding: 8px;
 }
 
+.footer p {
+  margin: 0;
+}
+
+.footer small {
+  font-size: 12px;
+}
+
 .footer a {
   color: white;
+}
+
+/* Media Queries */
+
+/* Large Screens */
+@media all and (max-width: 1000px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
 }
 
 /* Tablets */
